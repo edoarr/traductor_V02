@@ -1,0 +1,29 @@
+
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        TextInput:
+            text: 'Escriba'
+            id: text_input
+
+        Button:
+            size_hint_x: None
+            height: 20
+            text: 'Traducir'
+            on_press: app.button1_press()
+    BoxLayout:
+        orientation: 'horizontal'
+        RstDocument:
+            text: ' '
+            id: text_rst
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_x: None
+            height: 20
+            Button:
+                text: 'Limpiar'
+                on_press: app.button2_press()
+            Button:
+                text: '    Invertir \n Traducción'
+                on_press: app.button3_press()
